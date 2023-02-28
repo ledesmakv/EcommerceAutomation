@@ -1,9 +1,11 @@
 import time
 import random
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 
 # Initialize Webdriver
-driver = webdriver.Chrome('C:/Users/kvled/Downloads/chromedriver.exe')
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
 # Open URL and maximize window
 driver.get('http://www.tutorialsninja.com/demo/')
